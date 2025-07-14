@@ -1,0 +1,237 @@
+¡Perfecto, gracias por compartir la malla! Ya la leí y voy a prepararte una guía paso a paso completamente personalizada para crear tu malla interactiva de la carrera de Biotecnología en la Facultad de Ciencias (FCIEN, UdelaR).
+
+
+---
+
+🎯 Objetivo
+
+Crear una página web en GitHub Pages donde se visualicen las materias organizadas por semestre, indicando:
+
+✅ Aprobadas
+
+🟠 En curso
+
+⬜ Pendientes
+
+
+
+---
+
+🛠 PASO A PASO PERSONALIZADO
+
+🔹 1. Crear tu repositorio en GitHub
+
+1. Entrá a https://github.com
+
+
+2. Iniciá sesión y hacé clic en "New repository"
+
+
+3. Ponéle un nombre como: malla-biotecnologia
+
+
+4. Marcá la opción Public
+
+
+5. Clic en Create repository
+
+
+
+
+---
+
+🔹 2. Archivos que necesitás
+
+Te voy a preparar los siguientes archivos:
+
+index.html (estructura principal)
+
+style.css (diseño y colores)
+
+script.js (opcional, para interactividad)
+
+
+Te los dejo abajo listos para copiar y pegar.
+
+
+---
+
+📄 index.html (COPIÁ ESTE CÓDIGO)
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Biotecnología - FCIEN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Malla Interactiva - Biotecnología FCIEN</h1>
+  <p>Hacé clic en las materias para marcar tu avance.</p>
+
+  <div class="malla">
+    <!-- SEMESTRE 1 -->
+    <div class="semestre">
+      <h2>Semestre 1</h2>
+      <div class="materia" data-nombre="Matemática I">Matemática I</div>
+      <div class="materia">Física I para Biociencias</div>
+      <div class="materia">Laboratorio de Física 1</div>
+      <div class="materia">Química General</div>
+      <div class="materia">Biología General</div>
+      <div class="materia">SPR módulo I</div>
+      <div class="materia">SPR módulo II</div>
+    </div>
+
+    <!-- SEMESTRE 2 -->
+    <div class="semestre">
+      <h2>Semestre 2</h2>
+      <div class="materia">Matemática II - módulo I</div>
+      <div class="materia">Matemática II - módulo II</div>
+      <div class="materia">Química Orgánica I</div>
+      <div class="materia">Química Analítica</div>
+      <div class="materia">Introducción a la Biotecnología</div>
+    </div>
+
+    <!-- Agregá los siguientes semestres según tu avance -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+---
+
+🎨 style.css (COPIÁ ESTE CÓDIGO)
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #1e3a8a;
+}
+
+.malla {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px;
+}
+
+.semestre {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+}
+
+.semestre h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.materia {
+  background-color: #e5e7eb;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Colores según estado */
+.materia.aprobada { background-color: #16a34a; color: white; }
+.materia.en-curso { background-color: #f97316; color: white; }
+.materia.pendiente { background-color: #9ca3af; color: white; }
+
+.materia:hover {
+  opacity: 0.85;
+}
+
+
+---
+
+⚙️ script.js (interactividad opcional)
+
+// Alternar entre estados: pendiente → en curso → aprobada
+const materias = document.querySelectorAll('.materia');
+materias.forEach(m => {
+  m.classList.add('pendiente'); // Estado inicial
+  m.addEventListener('click', () => {
+    if (m.classList.contains('pendiente')) {
+      m.classList.remove('pendiente');
+      m.classList.add('en-curso');
+    } else if (m.classList.contains('en-curso')) {
+      m.classList.remove('en-curso');
+      m.classList.add('aprobada');
+    } else {
+      m.classList.remove('aprobada');
+      m.classList.add('pendiente');
+    }
+  });
+});
+
+
+---
+
+🔼 3. Subir los archivos a GitHub
+
+1. En tu repositorio, hacé clic en "Add file" → "Upload files"
+
+
+2. Subí los 3 archivos: index.html, style.css, script.js
+
+
+3. Clic en "Commit changes"
+
+
+
+
+---
+
+🌐 4. Activar GitHub Pages
+
+1. Andá a la pestaña Settings
+
+
+2. Buscá la sección "Pages"
+
+
+3. En "Source", elegí la rama main y carpeta /root
+
+
+4. Guardá y GitHub te va a dar un link como:
+
+https://tuusuario.github.io/malla-biotecnologia/
+
+
+
+
+---
+
+✅ ¡Listo!
+
+Ya tenés tu malla interactiva online para marcar materias según avances.
+
+
+---
+
+¿Querés que te cargue todos los semestres completos con cada materia?
+Decime qué materias ya tenés:
+
+Aprobadas ✅
+
+En curso 🟠
+
+Pendientes ⬜
+
+
+Y te devuelvo todo el index.html armado con los colores y clases correspondientes.
+
